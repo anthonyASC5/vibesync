@@ -70,7 +70,7 @@ export const VisualizerOrb: React.FC<VisualizerOrbProps> = ({ analyser }) => {
 
   // --- ANIMATION LOOP ---
 
-  useFrame((state) => {
+  useFrame(() => {
     analyser.getByteFrequencyData(dataArray);
     analyser.getByteTimeDomainData(waveformData);
 
@@ -174,6 +174,7 @@ export const VisualizerOrb: React.FC<VisualizerOrbProps> = ({ analyser }) => {
             count={particlesPosition.length / 3}
             array={particlesPosition}
             itemSize={3}
+            args={[particlesPosition, 3]}
           />
         </bufferGeometry>
         <pointsMaterial
