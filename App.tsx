@@ -9,7 +9,7 @@ import { AppState, Region, VisualizerMode } from './types';
 const App: React.FC = () => {
   const [appState, setAppState] = useState<AppState>(AppState.IDLE);
   const [audioFile, setAudioFile] = useState<File | null>(null);
-  const [trimRegion, setTrimRegion] = useState<Region>({ start: 0, end: 30 });
+  const [, setTrimRegion] = useState<Region>({ start: 0, end: 30 });
   const [analyser, setAnalyser] = useState<AnalyserNode | null>(null);
   const [isMuted, setIsMuted] = useState(false);
   const [visualizerMode, setVisualizerMode] = useState<VisualizerMode>(VisualizerMode.ORB);

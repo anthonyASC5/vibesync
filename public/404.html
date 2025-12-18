@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VibeSync Visualizer</title>
+    <script>
+      // Single Page App redirect for GitHub Pages
+      // This script redirects all 404 requests to the main index.html
+      // while preserving the original path in the URL
+      const segmentCount = 1; // Number of path segments to preserve (e.g., /vibesync)
+      const location = window.location;
+      const pathSegments = location.pathname.split('/');
+      const basePath = pathSegments.slice(0, segmentCount + 1).join('/');
+      const remainingPath = pathSegments.slice(segmentCount + 1).join('/');
+
+      // Redirect to the base path with the remaining path as a query parameter
+      location.replace(
+        basePath + '/' +
+        (remainingPath || location.search
+          ? '?p=' + encodeURIComponent(remainingPath + location.search)
+          : '') +
+        location.hash
+      );
+    </script>
+  </head>
+  <body>
+    <noscript>
+      <p>This application requires JavaScript to run.</p>
+      <p><a href="/vibesync/">Return to VibeSync</a></p>
+    </noscript>
+  </body>
+</html>
