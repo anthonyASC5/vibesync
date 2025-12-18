@@ -1,0 +1,5 @@
+{
+  "name": "VibeSync Visualizer",
+  "description": "An interactive audio visualizer that lets you upload tracks, trim loops, and experience reactive 3D visuals in real-time.",
+  "requestFramePermissions": []
+}
